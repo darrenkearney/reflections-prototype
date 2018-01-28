@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://art/title-screen.png" type="Texture" id=1]
-[ext_resource path="res://scripts/titlemenuselection.gd" type="Script" id=2]
+[ext_resource path="res://scripts/TitleMenuSelection.gd" type="Script" id=2]
 [ext_resource path="res://art/duane-home-view.jpg" type="Texture" id=3]
 [ext_resource path="res://scripts/HomeViewConversationLinks.gd" type="Script" id=4]
 [ext_resource path="res://art/duane-character-view.jpg" type="Texture" id=5]
@@ -13,7 +13,6 @@
 
 [node name="TitleScreen" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 368, 448 )
 
 [node name="Sprite" type="Sprite" parent="TitleScreen"]
@@ -68,7 +67,6 @@ max_lines_visible = -1
 
 [node name="Panel" type="Panel" parent="TitleScreen"]
 
-editor/display_folded = true
 anchor/left = 3
 anchor/top = 3
 anchor/right = 3

@@ -1,0 +1,249 @@
+[gd_scene load_steps=8 format=1]
+
+[ext_resource path="res://scripts/titlemenuselection.gd" type="Script" id=1]
+[ext_resource path="res://art/duane-home-view.jpg" type="Texture" id=2]
+[ext_resource path="res://scripts/HomeViewConversationLinks.gd" type="Script" id=3]
+[ext_resource path="res://art/duane-character-view.jpg" type="Texture" id=4]
+[ext_resource path="res://fonts/game-font-24.fnt" type="BitmapFont" id=5]
+[ext_resource path="res://scripts/DialogueBox.gd" type="Script" id=6]
+[ext_resource path="res://scripts/ReturnHomeButton.gd" type="Script" id=7]
+
+[node name="Game" type="Node"]
+
+[node name="TitleScreen" type="Node2D" parent="."]
+
+transform/pos = Vector2( 368, 448 )
+
+[node name="Credits" type="Label" parent="TitleScreen"]
+
+visibility/visible = false
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 128.0
+margin/top = 176.0
+margin/right = -128.0
+margin/bottom = -32.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.253906, 0.214233, 0.214233, 1 )
+text = "Programmer
+Darren Kearney
+
+Artist
+Cathal Duane
+
+Writer
+Ciara O Brien
+
+Production
+James Ward"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Panel" type="Panel" parent="TitleScreen"]
+
+editor/display_folded = true
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 128.0
+margin/top = -112.0
+margin/right = -128.0
+margin/bottom = -256.0
+script/script = ExtResource( 1 )
+
+[node name="PlayButton" type="Button" parent="TitleScreen/Panel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 16.0
+margin/top = 16.0
+margin/right = 240.0
+margin/bottom = 64.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+
+[node name="Label" type="Label" parent="TitleScreen/Panel/PlayButton"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 16.0
+margin/right = 224.0
+margin/bottom = 32.0
+text = "Play"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CreditsButton" type="Button" parent="TitleScreen/Panel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 16.0
+margin/top = 80.0
+margin/right = 240.0
+margin/bottom = 128.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+
+[node name="Label" type="Label" parent="TitleScreen/Panel/CreditsButton"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 1.0
+margin/top = 16.0
+margin/right = 224.0
+margin/bottom = 33.0
+text = "Credits"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HomeScreen" type="Node2D" parent="."]
+
+visibility/visible = false
+
+[node name="Background" type="Sprite" parent="HomeScreen"]
+
+transform/scale = Vector2( 1.11111, 1.06952 )
+texture = ExtResource( 2 )
+centered = false
+script/script = ExtResource( 3 )
+
+[node name="LinkButtonTest" type="LinkButton" parent="HomeScreen/Background"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 360.0
+margin/top = 121.0
+margin/right = 440.0
+margin/bottom = 243.0
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+
+[node name="ConversationScreen" type="Node2D" parent="."]
+
+visibility/visible = false
+
+[node name="Conversation01" type="Node2D" parent="ConversationScreen"]
+
+[node name="Sprite" type="Sprite" parent="ConversationScreen/Conversation01"]
+
+transform/pos = Vector2( 400, 400 )
+transform/scale = Vector2( 0.740741, 0.740741 )
+texture = ExtResource( 4 )
+
+[node name="DialogBox" type="Polygon2D" parent="ConversationScreen/Conversation01"]
+
+transform/pos = Vector2( -364.099, 442.986 )
+transform/scale = Vector2( 0.879633, 0.649564 )
+z/z = 1
+polygon = Vector2Array( 450.3, 130.879, 450.3, 500.358, 1287.01, 500.358, 1287.01, 130.879 )
+uv = Vector2Array(  )
+color = Color( 0.90625, 0.90625, 0.90625, 0.726784 )
+vertex_colors = ColorArray(  )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ConversationScreen/Conversation01/DialogBox"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 468.0
+margin/top = 156.0
+margin/right = 1268.0
+margin/bottom = 476.0
+custom_fonts/normal_font = ExtResource( 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+percent_visible = 1.0
+script/script = ExtResource( 6 )
+
+[node name="ReturnHomeButton" type="Button" parent="ConversationScreen/Conversation01/DialogBox/RichTextLabel"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 310.0
+margin/top = 123.0
+margin/right = 510.0
+margin/bottom = 197.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+script/script = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="ConversationScreen/Conversation01/DialogBox/RichTextLabel/ReturnHomeButton"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 24.0
+margin/right = 200.0
+margin/bottom = 49.0
+text = "Leave"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Timer" type="Timer" parent="ConversationScreen/Conversation01/DialogBox"]
+
+process_mode = 1
+wait_time = 0.05
+one_shot = false
+autostart = false
+
+[connection signal="visibility_changed" from="ConversationScreen" to="ConversationScreen/Conversation01/DialogBox/RichTextLabel" method="_on_ConversationScreen_visibility_changed"]
+
+[connection signal="pressed" from="ConversationScreen/Conversation01/DialogBox/RichTextLabel/ReturnHomeButton" to="ConversationScreen/Conversation01/DialogBox/RichTextLabel/ReturnHomeButton" method="_on_ReturnHomeButton_pressed"]
+
+[connection signal="timeout" from="ConversationScreen/Conversation01/DialogBox/Timer" to="ConversationScreen/Conversation01/DialogBox/RichTextLabel" method="_on_Timer_timeout"]
+
+

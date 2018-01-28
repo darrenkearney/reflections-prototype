@@ -1,10 +1,10 @@
 # DialogBox.gd
 extends RichTextLabel
 
-var dialog = ["Oh hi! Hey, you're back.",
+var dialog = ["Howya.",
 	"Well. What have you been at?",
-	"Ye? Nice. It's good to hear you're doing alright.",
-	"Cool. I'm pretty busy at the moment. See you later. "]
+	"Ye? Nice. It's good to hear you're back. Been at feck all. Just catching up on my netflix.",
+	"Cool. I'm busy at the moment. See you later."]
 var message_id = 0
 
 func _ready():

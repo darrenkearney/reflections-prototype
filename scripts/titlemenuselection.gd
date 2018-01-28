@@ -11,7 +11,7 @@ func _on_play_pressed():
 	get_node('../../HomeScreen').show()
 
 func _on_credits_pressed():
-	var credits = get_parent().get_node('Credits')
+	var credits = get_parent().get_node('CreditsPanel')
 	if credits.is_hidden():
 		credits.show()
 	else:

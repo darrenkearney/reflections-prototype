@@ -3,7 +3,8 @@ extends RichTextLabel
 
 var dialog = ["Oh hi! Hey, you're back.",
 	"Well. What have you been at?",
-	"I don't know what is happening with this code at all. More research required."]
+	"Ye? Nice. It's good to hear you're doing alright.",
+	"Cool. I'm pretty busy at the moment. See you later. "]
 var message_id = 0
 
 func _ready():
@@ -22,7 +23,6 @@ func _input(event):
 			set_visible_characters(get_total_character_count())
 			if message_id >= dialog.size()-1:
 				get_node('ReturnHomeButton').show()
-				print("CLICKED!")
 
 func _on_Timer_timeout():
 	set_visible_characters(get_visible_characters()+1)
